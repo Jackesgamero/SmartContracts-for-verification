@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+//Author: Jaime Martinez Gamero
+
 /* In Ethereum, transactions are not always processed in the order in which they are sent.
 An attacker can submit a transaction with a higher gas fee to "preempt" another transaction 
 that was already queued, known as a front-running attack */

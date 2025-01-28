@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// Source: https://github.com/ethereum/solidity/issues/14618
+
 /* A malicious contract calls back into the calling contract 
 before the first invocation of the function is finished */
 

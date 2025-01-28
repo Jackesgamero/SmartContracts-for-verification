@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+//Author: Jaime Martinez Gamero
+
 //Arithmetic operation reaches the maximum size of a type.
 
 contract IntegerOverflow {

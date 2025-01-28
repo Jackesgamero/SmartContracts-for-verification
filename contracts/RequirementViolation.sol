@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// Based on https://swcregistry.io/docs/SWC-123/
+
 /* require() function is meant to check preconditions, if the condition used to express 
 the requirement is too strong there is a requirement violation vulnerability */
 
