@@ -7,7 +7,7 @@ pragma solidity ^0.8.0;
 An attacker can submit a transaction with a higher gas fee to "preempt" another transaction 
 that was already queued, known as a front-running attack */
 
-contract TOD {
+contract TransactionOrderDependence {
     uint256 public price = 1 ether;
 
     function buy() external payable {

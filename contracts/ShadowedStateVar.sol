@@ -1,5 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.5.0;
+pragma solidity ^0.8.0;
+
+//This vulnerability is no longer possible in version 0.8.0 of Solidity due to changes
+//in the compiler but will be studied in version 0.5.0
 
 //Author: Jaime Martinez Gamero
 
@@ -7,14 +10,14 @@ pragma solidity 0.5.0;
 in complex contract systems this condition could go unnoticed and subsequently lead to security issues */
 
 contract Base {
-    uint256 public value = 10;
+    //uint256 public value = 10;
 }
 
 contract ShadowedStateVar is Base {
-    uint256 private value = 10;
+    /*uint256 private value = 10;
 
     function shadowVar() external pure {
         uint256 value = 20;
         value += 1;
-    }
+    }*/
 }
