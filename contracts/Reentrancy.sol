@@ -27,7 +27,7 @@ contract Reentrancy {
 
     1) Alice deposit 1 ether
     2) Alice call withdraw() and, since Alice has 1 ether, the condition balances[Alice] > 0 is satisfied
-    3) The contract executes line 16 which sends to Alice the ether stored in balances[msg.sender]
+    3) The contract executes line 18 which sends to Alice the ether stored in balances[msg.sender]
     4) Alice uses a malicious contract instead of a standar address that has a fallback() or receive() function
        that executes code automatically when ether is received 
     5) This functions calls again withdraw() before the original contract has updated the balances[msg.sender] state     
