@@ -9,7 +9,7 @@ RTL text rendering and confuse users as to the real intent of a contract */
 contract RightToLeftOverride {
     string public name;
 
-    function setName(string memory _name) public {
+    function setName(string calldata _name) public {
         name = _name;
     }
 }

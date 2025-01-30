@@ -8,7 +8,11 @@ pragma solidity ^0.8.0;
 contract IntegerOverflow {
     uint8 public value = 255;
 
-    function causeOverflow() external {
+    function getValue() external returns (uint8) {
+        return value;
+    }
+
+    function increment() external {
         unchecked {
             value++;
         }
