@@ -7,6 +7,13 @@ pragma solidity ^0.8.0;
 can withdraw some or all Ether from the contract account */
 
 contract UnprotectedEtherW {
+    address public owner;
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only the owner can call this function");
+        _;
+    }
+
     function withdrawAll(address payable _to) external {
         _to.transfer(address(this).balance);
     }
