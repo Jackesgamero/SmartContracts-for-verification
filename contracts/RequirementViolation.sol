@@ -1,22 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// Based on https://swcregistry.io/docs/SWC-123/
+// Author: Jaime Martinez Gamero
 
 /* require() function is meant to check preconditions, if the condition used to express 
 the requirement is too strong there is a requirement violation vulnerability */
 
 contract RequirementViolation {
-    Counter private c = new Counter();
-    function increase() external view returns (uint256) {
-        return c.inc(0);
-    }
-}
-
-contract Counter {
-    function inc(uint256 x) external pure returns (uint256) {
-        require(0 < x);
-        x++;
-        return x;
+    function isEven(uint256 x) external pure returns (bool) {
+        require(false);
+        return x % 2 == 0;
     }
 }

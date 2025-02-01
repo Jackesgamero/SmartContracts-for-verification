@@ -14,7 +14,12 @@ contract UnprotectedEtherW {
         _;
     }
 
+    function getOwner() external view returns (address) {
+        return owner;
+    }
+
     function withdrawAll(address payable _to) external {
-        _to.transfer(address(this).balance);
+        (bool success, ) = _to.call{value: address(this).balance}("");
+        require(success, "Withdrawal failed");
     }
 }

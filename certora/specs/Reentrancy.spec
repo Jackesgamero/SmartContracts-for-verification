@@ -11,7 +11,6 @@ persistent ghost bool g_reverted;
 
 //Hooks are used to attach CVL code to certain low-level operations
 hook CALL(uint g, address addr, uint value, uint argsOffset, uint argsLength, uint retOffset, uint retLength) uint rc {
-
 	called_extcall = true;
 	env e;
 	bool cond;
