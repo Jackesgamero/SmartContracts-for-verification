@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 //Author: Jaime Martinez Gamero
 
 /* Contracts often need access to time values to perform certain types of functionality,
-malicious miners can alter the timestamp of their blocks, especially if they can gain advantages by doing so*/
+malicious validators can alter the timestamp of their blocks, especially if they can gain advantages by doing so*/
 
 contract Lottery {
     function lotteryWinner() public view returns (uint256) {
