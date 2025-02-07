@@ -7,7 +7,8 @@ pragma solidity ^0.8.0;
 malicious validators can alter the timestamp of their blocks, especially if they can gain advantages by doing so*/
 
 contract Lottery {
-    function lotteryWinner() public view returns (uint256) {
-        return uint256(keccak256(abi.encodePacked(block.timestamp))) % 100000;
+    function generateLotteryWinner() public view returns (uint256) {
+        uint256 winner = (block.timestamp * block.timestamp) % 100000;
+        return winner < 10000 ? winner + 10000 : winner;
     }
 }
