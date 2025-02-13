@@ -14,10 +14,6 @@ contract UnprotectedEtherW {
         _;
     }
 
-    function getOwner() external view returns (address) {
-        return owner;
-    }
-
     function withdrawAll(address payable _to) external {
         (bool success, ) = _to.call{value: address(this).balance}("");
         require(success, "Withdrawal failed");

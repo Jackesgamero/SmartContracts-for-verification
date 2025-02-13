@@ -13,4 +13,11 @@ contract IntegerOverflow {
             value++;
         }
     }
+
+    //Rule to be checked by solCMC
+    function invariant() public {
+        uint8 initvalue = value;
+        increment();
+        assert(initvalue < value);
+    }
 }

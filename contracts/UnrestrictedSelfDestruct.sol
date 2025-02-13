@@ -13,10 +13,6 @@ contract UnrestrictedSelfDestruct {
         _;
     }
 
-    function getOwner() external view returns (address) {
-        return owner;
-    }
-
     function destroy(address payable _to) external {
         selfdestruct(_to);
     }

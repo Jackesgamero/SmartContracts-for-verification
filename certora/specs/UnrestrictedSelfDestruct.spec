@@ -13,7 +13,7 @@ rule onlyOwnerCanCallDestroy {
     reverted = lastReverted;
 
     
-    assert (caller == getOwner() || caller != getOwner() => reverted, 
+    assert (caller == currentContract.owner || caller != currentContract.owner => reverted, 
     "Only the owner can call destroy"
     );
 }

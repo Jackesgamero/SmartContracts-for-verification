@@ -1,7 +1,3 @@
-methods {
-	function getOwner() external returns(address) envfree;
-}
-
 persistent ghost bool reverted;
 
 
@@ -12,7 +8,7 @@ rule onlyOwnerCanWithdraw {
     withdrawAll@withrevert(e,caller);
     reverted = lastReverted;
 
-    assert (caller == getOwner() || caller != getOwner() => reverted, 
+    assert (caller == currentContract.owner || caller != currentContract.owner => reverted, 
     "Only the owner can call withdrawAll"
     );
 }

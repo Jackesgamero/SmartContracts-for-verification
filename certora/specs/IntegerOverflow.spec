@@ -1,13 +1,12 @@
 methods {
 	function increment() external envfree;
-	function getValue() external returns(uint8) envfree;
 }
 
 
 rule noOverflowOnIncrement() {
-    uint8 initValue = getValue();
+    uint8 initValue = currentContract.value;
     increment();
-    uint8 finalValue = getValue();
+    uint8 finalValue = currentContract.value;
     
     assert initValue < finalValue;
 }

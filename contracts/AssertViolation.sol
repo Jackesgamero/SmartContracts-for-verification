@@ -9,12 +9,8 @@ functioning code should never reach a failing assert statement */
 contract AssertViolation {
     uint256 public points;
 
-    function getPoints() external returns (uint256) {
-        return points;
-    }
-
     function addPoints(uint256 amount) external {
         points += amount;
-        assert(points >= amount);
+        assert(points < amount);
     }
 }
