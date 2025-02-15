@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-//Author: Jaime Martinez Gamero
+//Based on: https://swcregistry.io/docs/SWC-109/
 
 //Uninitialized local storage variables can point to unexpected storage locations in the contract
 

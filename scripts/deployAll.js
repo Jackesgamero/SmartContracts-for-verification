@@ -12,7 +12,7 @@ async function main() {
         "TransactionOrderDependence",
         "TxOrigin",
         "UncheckedCallReturn",
-        //"UninitializedStorage",
+        "UninitializedStorage",
         "UnprotectedEtherW",
         "UnrestrictedDelegateCall",
         "UnrestrictedSelfDestruct",
