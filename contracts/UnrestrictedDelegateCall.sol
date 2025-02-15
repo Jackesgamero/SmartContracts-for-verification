@@ -10,7 +10,7 @@ any storage values of the caller and has full control over caller's balance */
 contract UnrestrictedDelegateCall {
     address public code;
 
-    function delegate(address _code, bytes memory data) external {
+    function delegate(address _code, bytes calldata data) external {
         code = _code;
         (bool success, ) = _code.delegatecall(data);
         require(success, "Delegatecall failed");

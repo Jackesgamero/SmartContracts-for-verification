@@ -6,7 +6,6 @@ async function main() {
         "IntegerOverflow",
         "Reentrancy",
         "RequirementViolation",
-        "RightToLeftOverride",
         //"ShadowedStateVar",
         "Timestamp",
         "TransactionOrderDependence",
