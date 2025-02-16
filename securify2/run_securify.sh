@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directorio donde están los archivos
-SHARE_DIR="/home/jaime/Documentos/securify2/contracts"
+SHARE_DIR="./contracts"
 
 # Verifica que el directorio existe
 if [ ! -d "$SHARE_DIR" ]; then
