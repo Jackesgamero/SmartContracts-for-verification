@@ -1,6 +1,14 @@
+$ java -jar ethor.jar --preanalysis --prune-strategy=aggressive --predicate-inlining-strategy=linear output/Reentrancy.bin
 Results for Reentrancy.bin:
 Queries
 query id:       reentrancyCall_0_391
 execution time: 0
 result:         UNSATISFIABLE
 info:           Query eliminated during preprocessing.
+
+$ java -jar ethor.jar binary/Reentrancy.bin 
+Results for Reentrancy.bin:
+Queries
+query id:       reentrancyCall_0_391
+execution time: 1092350
+result:         UNSATISFIABLE
