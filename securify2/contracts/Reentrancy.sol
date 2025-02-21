@@ -1,7 +1,5 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.0;
-
 // Source: https://github.com/ethereum/solidity/issues/14618
 
 /* A malicious contract calls back into the calling contract 
@@ -16,7 +14,7 @@ contract Reentrancy {
 
     function withdraw() public {
         if (balances[msg.sender] > 0) {
-            (bool success, ) = msg.sender.call{value: balances[msg.sender]}("");
+            (bool success, ) = msg.sender.call.value(balances[msg.sender])("");
             require(success, "Transfer failed");
             balances[msg.sender] = 0;
         }
@@ -33,4 +31,3 @@ contract Reentrancy {
        that executes code automatically when ether is received 
     5) This functions calls again withdraw() before the original contract has updated the balances[msg.sender] state     
 */
-

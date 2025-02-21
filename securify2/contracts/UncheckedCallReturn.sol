@@ -6,6 +6,6 @@
 
 contract UncheckedCallReturn {
     function uncheckedCall(address payable _to) external {
-        _to.call{value: 1 ether}("");
+        _to.call.value(1 ether)("");
     }
 }
