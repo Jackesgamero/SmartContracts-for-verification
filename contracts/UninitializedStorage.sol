@@ -1,22 +1,23 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.4.0;
 
-//Based on: https://swcregistry.io/docs/SWC-109/
+//Author: Jaime Martínez Gamero
 
 //Uninitialized local storage variables can point to unexpected storage locations in the contract
 
-contract UninitializedStorage {
-    struct Data {
-        address user;
-        uint256 value;
+contract testContract{
+
+    uint256 public A;
+    uint256 public B;
+
+    struct Product {
+        uint256 quantity;
+        uint256 price;
     }
 
-    Data[] public records;
-
-    function addRecord(uint256 _value) external {
-        Data memory newData;
-        newData.user = msg.sender;
-        newData.value = _value;
-        records.push(newData);
+    function test(uint256 _quantity, uint256 _price) public{
+        Product p;
+        p.quantity = _quantity;
+        p.price = _price;
     }
 }
