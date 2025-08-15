@@ -1,23 +1,24 @@
 // SPDX-License-Identifier: MIT
+pragma solidity ^0.4.0;
 
-////This vulnerability is no longer possible due to changes in the compiler
-
-//Based on: https://swcregistry.io/docs/SWC-109/
+//Author: Jaime Martínez Gamero
 
 //Uninitialized local storage variables can point to unexpected storage locations in the contract
+//This vulnerability is no longer posible due to changes in the compiler
 
-contract UninitializedStorage {	
-	struct Data {
-		address user;
-		uint256 value;
-	}
-	
-	Data[] public records;
-	
-	function addRecord(uint256 _value) external {
-		Data memory newData;
-		newData.user = msg.sender;
-		newData.value = _value;
-		records.push(newData);
-	}
+contract testContract{
+
+    uint256 public A;
+    uint256 public B;
+
+    struct Product {
+        uint256 quantity;
+        uint256 price;
+    }
+
+    function test(uint256 _quantity, uint256 _price) public{
+        Product p;
+        p.quantity = _quantity;
+        p.price = _price;
+    }
 }
