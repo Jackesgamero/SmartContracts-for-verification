@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+pragma solidity 0.5.2;
+
 //Author: Jaime Martinez Gamero
 
 /* tx.origin is a global variable in Solidity which returns the address of the account 
