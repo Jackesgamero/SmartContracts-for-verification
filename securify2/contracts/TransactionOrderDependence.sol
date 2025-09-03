@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+pragma solidity 0.5.2;
+
 //Author: Jaime Martinez Gamero
 
 /* In Ethereum, transactions are not always processed in the order in which they are sent.
