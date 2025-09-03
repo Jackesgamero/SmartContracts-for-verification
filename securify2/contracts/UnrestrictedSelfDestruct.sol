@@ -2,6 +2,8 @@
 
 //Author: Jaime Martinez Gamero
 
+pragma solidity 0.5.2;
+
 // Due to missing or insufficient access controls, malicious parties can self-destruct the contract
 
 contract UnrestrictedSelfDestruct {
