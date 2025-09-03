@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+pragma solidity 0.5.2;
+
 //Author: Jaime Martinez Gamero
 
 /* Contracts often need access to time values to perform certain types of functionality,
