@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+pragma solidity 0.5.2;
+
 // Source: https://github.com/ethereum/solidity/issues/14618
 
 /* A malicious contract calls back into the calling contract 
