@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+pragma solidity 0.5.2;
+
 //Author: Jaime Martinez Gamero
 
 /* Due to missing or insufficient access controls, malicious parties 
