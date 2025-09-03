@@ -2,6 +2,8 @@
 
 //Author: Jaime Martinez Gamero
 
+pragma solidity 0.5.2;
+
 /* The function delegatecall() allows a smart contract to dynamically load code from a 
 different address at runtime, if the call is done to an untrusted contract it can change 
 any storage values of the caller and has full control over caller's balance */
