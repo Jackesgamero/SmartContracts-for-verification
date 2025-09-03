@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+pragma solidity 0.5.2;
+
 //This vulnerability is no longer possible due to changes in the compiler
 
 //Author: Jaime Martinez Gamero
